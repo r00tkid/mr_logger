@@ -5,7 +5,7 @@ INSTALL:
 pip install mr_logger
 
 USAGE:
-from logger import Logger
+from mr_logger.logger import Logger
 
 methods:
 * log() - display white log line with arrows prefix
