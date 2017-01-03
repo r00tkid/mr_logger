@@ -1,6 +1,10 @@
 # mr_logger
 this is simple logger service with unicode characters prefixes and color support
 
+INSTALL:
+pip install mr_logger
+
+USAGE:
 from logger import Logger
 
 methods:
