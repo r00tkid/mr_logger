@@ -9,4 +9,5 @@ methods:
 * warn() - display orange warning
 * err() - display red error message
 * ok() - display green message
+* human_view() - will format you json string for print it
 

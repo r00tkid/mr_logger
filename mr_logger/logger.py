@@ -2,7 +2,8 @@
 #!/usr/bin/python
 
 from termcolor import colored
-
+import json
+from colored import stylize, fg
 
 TYPES = ['info', 'warn', 'err', 'ok', 'def']
 
@@ -30,6 +31,11 @@ class Logger:
         pass
 
     @staticmethod
+    def human_view(json_text):
+        return stylize(json.dumps(json_text, indent=2, sort_keys=True),
+             fg("indian_red_1a"))
+
+    @staticmethod
     def _get_prefix(msg_type):
         return PREFIXES[msg_type]
 
@@ -38,6 +44,8 @@ class Logger:
         return COLORS[msg_type]
 
     def _prefix_text(self, msg_type, text):
+        if type(text) is dict:
+            text = self.human_view(json_text=text)
         return self._get_prefix(msg_type=msg_type) + str(text)
 
     def _get_ready_text(self, msg_type, text):
