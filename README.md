@@ -1,7 +1,11 @@
 # mr_logger
 this is simple logger service with unicode characters prefixes and color support
 
-from logger import Logger
+INSTALL:
+pip install mr_logger
+
+USAGE:
+from mr_logger.logger import Logger
 
 methods:
 * log() - display white log line with arrows prefix
